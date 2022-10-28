@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react';
+
 import reactLogo from './assets/react.svg';
+
 import './App.css';
 
 function App() {
@@ -7,16 +9,16 @@ function App() {
 
   const s = useMemo(() => {
     return count;
-  }, []);
+  }, [count]);
 
   return (
     <div className="App">
       {s}
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
