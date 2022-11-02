@@ -1,8 +1,9 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import reactLogo from './assets/react.svg';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -34,6 +35,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <ul>
+        <li>
+          <Link to="portal">Portal</Link>
+        </li>
+      </ul>
     </div>
   );
 }
