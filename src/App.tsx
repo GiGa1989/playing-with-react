@@ -39,6 +39,9 @@ function App() {
         <li>
           <Link to="portal">Portal</Link>
         </li>
+        <li>
+          <Link to="memo">Memo</Link>
+        </li>
       </ul>
     </div>
   );

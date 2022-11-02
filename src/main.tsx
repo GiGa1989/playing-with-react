@@ -6,6 +6,7 @@ import App from './App';
 import PortalPage from './pages/portal/portal';
 
 import './index.css';
+import MemoPage from './pages/memo/memo';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/portal',
     element: <PortalPage />,
+  },
+  {
+    path: '/memo',
+    element: <MemoPage />,
   },
 ]);
 
