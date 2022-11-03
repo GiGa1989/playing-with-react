@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode, useEffect, useRef } from 'react';
+import { FC, ReactNode, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import ReactPortal from '../react-portal';
@@ -9,10 +9,10 @@ interface Props {
   handleClose: () => void;
 }
 
-const Modal: FunctionComponent<Props> = ({ children, isOpen, handleClose }) => {
+const Modal: FC<Props> = ({ children, isOpen, handleClose }) => {
   const nodeRef = useRef(null);
   useEffect(() => {
-    const closeOnEscapeKey = (e: { key: string }) =>
+    const closeOnEscapeKey = (e: KeyboardEvent) =>
       e.key === 'Escape' ? handleClose() : null;
     document.body.addEventListener('keydown', closeOnEscapeKey);
     return () => {
