@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import reactLogo from './assets/react.svg';
 
 import './App.scss';
+import useMyHook from './hook';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,8 +13,13 @@ function App() {
     return count;
   }, [count]);
 
+  const [isOnline, friendID2] = useMyHook(10);
+
   return (
     <div className="App">
+      <div>
+        test: {String(isOnline)} - {friendID2}
+      </div>
       {s}
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
