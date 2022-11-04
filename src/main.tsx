@@ -8,6 +8,7 @@ import PortalPage from './pages/portal/portal';
 import './index.css';
 import MemoPage from './pages/memo/memo';
 import ContextPage from './pages/context/context-page';
+import ReactQuery from './pages/react-query/react-query';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: '/context',
     element: <ContextPage />,
+  },
+  {
+    path: '/react-query',
+    element: <ReactQuery />,
   },
 ]);
 

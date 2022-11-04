@@ -1,5 +1,9 @@
 {
-  "extends": ["react-app", "cypress"],
+  "extends": [
+    "react-app",
+    "cypress",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
   "plugins": ["react-hooks", "plugin:cypress/recommended"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",
