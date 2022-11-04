@@ -9,6 +9,7 @@ import './index.css';
 import MemoPage from './pages/memo/memo';
 import ContextPage from './pages/context/context-page';
 import ReactQuery from './pages/react-query/react-query';
+import ZustandPage from './pages/zustand/zustand';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: '/react-query',
     element: <ReactQuery />,
+  },
+  {
+    path: '/zustand',
+    element: <ZustandPage />,
   },
 ]);
 
