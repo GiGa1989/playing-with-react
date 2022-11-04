@@ -53,10 +53,14 @@ function App() {
       </p>
       <ul>
         <li>
-          <Link to="portal">Portal</Link>
+          react / react-dom <Link to="portal">Portal</Link>
+          <Link to="memo">Memo</Link>
+          <Link to="context">context</Link>
         </li>
         <li>
-          <Link to="memo">Memo</Link>
+          libraries: <Link to="react-query">reactQuery</Link>
+          <Link to="zustand1">zustand1</Link>
+          <Link to="zustand2">zustand2</Link>
         </li>
       </ul>
     </div>

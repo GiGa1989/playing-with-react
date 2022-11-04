@@ -10,6 +10,7 @@ import MemoPage from './pages/memo/memo';
 import ContextPage from './pages/context/context-page';
 import ReactQuery from './pages/react-query/react-query';
 import ZustandPage from './pages/zustand/zustand';
+import ZustandPage2 from './pages/zustand/zustand2';
 
 const router = createBrowserRouter([
   {
@@ -33,8 +34,12 @@ const router = createBrowserRouter([
     element: <ReactQuery />,
   },
   {
-    path: '/zustand',
+    path: '/zustand1',
     element: <ZustandPage />,
+  },
+  {
+    path: '/zustand2',
+    element: <ZustandPage2 />,
   },
 ]);
 
