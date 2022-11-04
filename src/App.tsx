@@ -6,6 +6,10 @@ import reactLogo from './assets/react.svg';
 import './App.scss';
 import useMyHook from './hook';
 
+const copyToClipboard = (str: string) => {
+  return navigator.clipboard.writeText(str);
+};
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -17,6 +21,12 @@ function App() {
 
   return (
     <div className="App">
+      <div>
+        <p onClick={() => copyToClipboard('testing__copyToClipboard')}>
+          test copyToClipboard
+        </p>
+        <textarea />
+      </div>
       <div>
         test: {String(isOnline)} - {friendID2}
       </div>
