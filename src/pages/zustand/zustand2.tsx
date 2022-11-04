@@ -49,6 +49,9 @@ const createFishSlice: StateCreator<
 
 // const myMiddlewares = f => devtools(persist(f));
 
+/* 
+// persist/devtool test
+
 let store = (...a) => ({
   ...createBearSlice(...a),
   ...createFishSlice(...a),
@@ -62,6 +65,23 @@ store = devtools(store);
 // const useStore = create(store);
 
 let useBoundStore = create<BearSlice & FishSlice>()(store);
+
+ */
+
+let useBoundStore = create<BearSlice & FishSlice>()(
+  devtools(
+    persist(
+      (...a) => ({
+        ...createBearSlice(...a),
+        ...createFishSlice(...a),
+      }),
+      {
+        name: 'bear-fish', // unique name, può essere un nome diverso
+        getStorage: () => localStorage, // (optional) by default, 'localStorage' is used
+      },
+    ),
+  ),
+);
 
 const ZustandPage2: FC = () => {
   // const bears2 = useBoundStore(state => state.bears);
