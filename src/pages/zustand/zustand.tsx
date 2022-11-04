@@ -10,21 +10,26 @@ import { devtools, persist } from 'zustand/middleware';
   }));
 */
 
-let store = set => ({
+let store = (set, get) => ({
   count: 1,
   inc: () => set(state => ({ count: state.count + 1 })),
+  inc2: (payload: number) => set({ count: get().count + payload }),
 });
 
-store = persist(store, { name: 'count' });
+store = persist(store, {
+  name: 'count', // unique name, può essere un nome diverso
+  getStorage: () => sessionStorage, // (optional) by default, 'localStorage' is used
+});
 store = devtools(store);
 const useStore = create(store);
 
 function Counter() {
-  const { count, inc } = useStore();
+  const { count, inc, inc2 } = useStore();
   return (
     <div className="counter">
       <span>{count}</span>
       <button onClick={inc}>one up</button>
+      <button onClick={() => inc2(10)}>one up</button>
     </div>
   );
 }
