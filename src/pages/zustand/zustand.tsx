@@ -2,7 +2,6 @@ import { FC } from 'react';
 import create from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 
-
 /*
   // basic store
   const useStore = create(set => ({
@@ -17,6 +16,7 @@ let store = set => ({
 });
 
 store = persist(store, { name: 'count' });
+store = devtools(store);
 const useStore = create(store);
 
 function Counter() {
