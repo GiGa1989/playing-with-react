@@ -1,7 +1,8 @@
-@import 'styles/reset';
-@import 'styles/normalize';
+@import 'pages/memo/memo';
+@import 'pages/memo2/memo';
 @import 'pages/portal/modal/modal';
-@import 'pages/memo//memo';
+@import 'styles/normalize';
+@import 'styles/reset';
 
 #root {
   max-width: 1280px;

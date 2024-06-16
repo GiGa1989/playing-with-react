@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
-import PortalPage from './pages/portal/portal';
-
-import './index.css';
-import MemoPage from './pages/memo/memo';
 import ContextPage from './pages/context/context-page';
+import MemoPage from './pages/memo/memo';
+import UserPostsIndex from './pages/memo2/UserPostsIndex';
+import PortalPage from './pages/portal/portal';
 import ReactQuery from './pages/react-query/react-query';
 import ZustandPage from './pages/zustand/zustand';
 import ZustandPage2 from './pages/zustand/zustand2';
+
+import './index.css';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/memo',
     element: <MemoPage />,
+  },
+  {
+    path: '/memo2',
+    element: <UserPostsIndex />,
   },
   {
     path: '/context',
