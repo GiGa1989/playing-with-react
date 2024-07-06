@@ -9,10 +9,9 @@ import MemoPage from './pages/memo/memo';
 import UserPostsIndex from './pages/memo2/UserPostsIndex';
 import PortalPage from './pages/portal/portal';
 import ReactQuery from './pages/react-query/react-query';
-import ZustandPage from './pages/zustand/zustand';
-import ZustandPage2 from './pages/zustand/zustand2';
 
 import './index.css';
+import ZustandPage from './pages/zustand/zustand';
 
 const router = createBrowserRouter([
   {
@@ -40,12 +39,8 @@ const router = createBrowserRouter([
     element: <ReactQuery />,
   },
   {
-    path: '/zustand1',
+    path: '/zustand',
     element: <ZustandPage />,
-  },
-  {
-    path: '/zustand2',
-    element: <ZustandPage2 />,
   },
   {
     path: '/copyToClipboard',

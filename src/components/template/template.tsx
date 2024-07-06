@@ -45,12 +45,8 @@ const Template: FC<Props> = ({ children }) => {
           label: 'reactQuery',
         },
         {
-          url: 'zustand1',
-          label: 'zustand1',
-        },
-        {
-          url: 'zustand2',
-          label: 'zustand2',
+          url: 'zustand',
+          label: 'zustand',
         },
         {
           url: 'copyToClipboard',
