@@ -12,6 +12,7 @@ import ReactQuery from './pages/react-query/react-query';
 
 import './index.css';
 import ZustandPage from './pages/zustand/zustand';
+import RecoilPage from './pages/recoil/recoil';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: '/zustand',
     element: <ZustandPage />,
+  },
+  {
+    path: '/recoil',
+    element: <RecoilPage />,
   },
   {
     path: '/copyToClipboard',

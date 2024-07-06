@@ -49,6 +49,10 @@ const Template: FC<Props> = ({ children }) => {
           label: 'zustand',
         },
         {
+          url: 'recoil',
+          label: 'recoil',
+        },
+        {
           url: 'copyToClipboard',
           label: 'copyToClipboard',
         },
