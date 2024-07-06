@@ -1,13 +1,15 @@
+@import 'pages/clipboard/clipboard.scss';
 @import 'pages/memo/memo';
 @import 'pages/memo2/memo';
 @import 'pages/portal/modal/modal';
 @import 'styles/normalize';
 @import 'styles/reset';
+@import './components/template/template.scss';
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  // padding: 2rem;
   text-align: center;
 }
 
@@ -15,12 +17,12 @@
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  &:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  &.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
 }
 
 @keyframes logo-spin {
@@ -33,7 +35,8 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  a:nth-of-type(2) .logo,
+  .logo.react {
     animation: logo-spin infinite 20s linear;
   }
 }

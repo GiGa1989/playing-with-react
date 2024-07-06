@@ -1,3 +1,5 @@
+import Template from '@/components/template/template';
+
 import { FC } from 'react';
 import create, { StateCreator } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
@@ -87,14 +89,16 @@ const ZustandPage2: FC = () => {
   // const bears2 = useBoundStore(state => state.bears);
   const { bears, fishes, addFish, addBear, eatFish } = useBoundStore();
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <span>{fishes} fishes</span>
-      <span>{bears} bears</span>
-      {/* <span>{bears2} bears2</span> */}
-      <button onClick={addFish}>addFish</button>
-      <button onClick={addBear}>addBear</button>
-      <button onClick={eatFish}>eatFish</button>
-    </div>
+    <Template>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <span>{fishes} fishes</span>
+        <span>{bears} bears</span>
+        {/* <span>{bears2} bears2</span> */}
+        <button onClick={addFish}>addFish</button>
+        <button onClick={addBear}>addBear</button>
+        <button onClick={eatFish}>eatFish</button>
+      </div>
+    </Template>
   );
 };
 

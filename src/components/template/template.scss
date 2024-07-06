@@ -1,0 +1,21 @@
+.template {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    // place-items: center;
+    justify-content: center;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      height: 3em;
+    }
+  }
+}

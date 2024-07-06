@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App';
+import Clipboard from './pages/clipboard/clipboard';
 import ContextPage from './pages/context/context-page';
 import MemoPage from './pages/memo/memo';
 import UserPostsIndex from './pages/memo2/UserPostsIndex';
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: '/zustand2',
     element: <ZustandPage2 />,
+  },
+  {
+    path: '/copyToClipboard',
+    element: <Clipboard />,
   },
 ]);
 

@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 
 import UserPostsList from './UserPostsList';
+import Template from '@/components/template/template';
 
 const posts = [
   {
@@ -82,7 +83,10 @@ const UserPostsIndex = () => {
   const deletePost2 = useCallback(
     (e: any) => {
       const { postId } = e.currentTarget.dataset;
-      console.log('LOG-ENH 🚀 ~ file: UserPostsIndex.tsx:85 ~ UserPostsIndex ~ currentTarget.dataset', e.currentTarget.dataset);
+      console.log(
+        'LOG-ENH 🚀 ~ file: UserPostsIndex.tsx:85 ~ UserPostsIndex ~ currentTarget.dataset',
+        e.currentTarget.dataset,
+      );
       const remainingPosts = userPosts.filter(
         post => post.id !== parseInt(postId),
       );
@@ -92,14 +96,16 @@ const UserPostsIndex = () => {
   );
 
   return (
-    <div className="my-1 p-2 box">
-      <div className="m-1 py-1">
-        <h2 className="heading-md">Your Posts</h2>
-        <div className="px-1">
-          {<UserPostsList userPosts={userPosts} deletePost={deletePost2} />}
+    <Template>
+      <div className="my-1 p-2 box">
+        <div className="m-1 py-1">
+          <h2 className="heading-md">Your Posts</h2>
+          <div className="px-1">
+            {<UserPostsList userPosts={userPosts} deletePost={deletePost2} />}
+          </div>
         </div>
       </div>
-    </div>
+    </Template>
   );
 };
 

@@ -1,3 +1,4 @@
+import Template from '@/components/template/template';
 import { FC, memo, useState } from 'react';
 
 export interface Props extends React.HTMLAttributes<HTMLElement> {}
@@ -78,48 +79,50 @@ const MemoPage: FC<Props> = () => {
   ]);
 
   return (
-    <div className="memo-page">
-      <div className="actions">
-        <span
-          className="action"
-          onClick={() => {
-            setCount(c => c - 1);
-            setPeople(l => [
-              ...l.map(i =>
-                i.name === 'n1' ? { ...i, age: i.age - 1 } : { ...i },
-              ),
-            ]);
-          }}
-        >
-          -
-        </span>
-        {count}
-        <span
-          className="action"
-          onClick={() => {
-            setCount(c => c + 1);
-            setPeople(l => [
-              ...l.map(i =>
-                i.name === 'n3' ? { ...i, age: i.age + 1 } : { ...i },
-              ),
-            ]);
-          }}
-        >
-          +
-        </span>
-      </div>
-      <div className="results">
-        {/* <Box name="classic_FC" />
+    <Template>
+      <div className="memo-page">
+        <div className="actions">
+          <span
+            className="action"
+            onClick={() => {
+              setCount(c => c - 1);
+              setPeople(l => [
+                ...l.map(i =>
+                  i.name === 'n1' ? { ...i, age: i.age - 1 } : { ...i },
+                ),
+              ]);
+            }}
+          >
+            -
+          </span>
+          {count}
+          <span
+            className="action"
+            onClick={() => {
+              setCount(c => c + 1);
+              setPeople(l => [
+                ...l.map(i =>
+                  i.name === 'n3' ? { ...i, age: i.age + 1 } : { ...i },
+                ),
+              ]);
+            }}
+          >
+            +
+          </span>
+        </div>
+        <div className="results">
+          {/* <Box name="classic_FC" />
         <MemoBox name="memo_FC" /> */}
-        {/* <MemoizedBox name="MemoizedBox" /> */}
-        {people.map((item, key) => (
-          <div key={key}>
-            {/* <Box2 name={item.name} age={item.age} /> */}
-            <MemoizedBox2 name={item.name} age={item.age} />
-          </div>
-        ))}
+          {/* <MemoizedBox name="MemoizedBox" /> */}
+          {people.map((item, key) => (
+            <div key={key}>
+              {/* <Box2 name={item.name} age={item.age} /> */}
+              <MemoizedBox2 name={item.name} age={item.age} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </Template>
   );
 };
 

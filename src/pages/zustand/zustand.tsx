@@ -1,3 +1,5 @@
+// import Template from '../../components/template/template';
+import Template from '@/components/template/template';
 import { FC } from 'react';
 import create from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
@@ -34,7 +36,11 @@ function Counter() {
   );
 }
 const ZustandPage: FC = () => {
-  return <Counter />;
+  return (
+    <Template>
+      <Counter />
+    </Template>
+  );
 };
 
 export default ZustandPage;
